@@ -1,8 +1,7 @@
-import { MainPage } from '../pages/main';
-import { FC, PropsWithChildren } from 'react';
+import { MainPage } from '../pages/main-page';
 
 export type TAppProps = { cardAmount: number };
 
-export const App: FC<PropsWithChildren<TAppProps>> = ({ cardAmount }) => (
+export const App = ({ cardAmount }: TAppProps): JSX.Element => (
   <MainPage cardAmount = {cardAmount} />
 );

@@ -1,6 +1,4 @@
-import { FC } from 'react';
-
-export const OfferCard: FC = () => (
+export const OfferCard = (): JSX.Element => (
   <article className="cities__card place-card">
     <div className="place-card__mark">
       <span>Premium</span>
