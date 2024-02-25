@@ -1,11 +1,13 @@
 import { TAppProps } from '../../app';
 import { OfferCard } from '../../components/offer-card';
+import { LoginPage } from '../login-page/login-page';
 import { MainEmptyPage } from '../main-empty-page';
 
 type TMainPageProps = Pick<TAppProps, 'cardAmount'>
 
 export const MainPage = ({ cardAmount }: TMainPageProps): JSX.Element => (
   <div className="page page--gray page--main">
+    <LoginPage></LoginPage>
     <header className="header">
       <div className="container">
         <div className="header__wrapper">
@@ -94,9 +96,10 @@ export const MainPage = ({ cardAmount }: TMainPageProps): JSX.Element => (
             </form>
             <div className="cities__places-list places__list tabs__content">
               {
-                (cardAmount > 0)
-                  ? Array.from({ length: cardAmount }, OfferCard)
-                  : <MainEmptyPage/>
+                (cardAmount > 0) && Array.from({ length: cardAmount }, OfferCard)
+              }
+              {
+                (cardAmount === 0) && <MainEmptyPage />
               }
             </div>
           </section>
