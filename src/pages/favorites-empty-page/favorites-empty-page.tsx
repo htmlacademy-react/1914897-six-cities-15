@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-export const FavoritiesEmptyPage = (): JSX.Element => (
+export const FavoritesEmptyPage = (): JSX.Element => (
   <div className="page page--favorites-empty">
     <Helmet>
       <title>6 Cities. Favorites</title>
