@@ -1,9 +1,13 @@
 import { FC, Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../app/router/routes/routes';
+import { Helmet } from 'react-helmet-async';
 
 export const NotFoundPage: FC = () => (
   <Fragment>
+    <Helmet>
+      <title>6 cities. Page Not found</title>
+    </Helmet>
     <header className="header">
       <div className="container">
         <div className="header__wrapper">

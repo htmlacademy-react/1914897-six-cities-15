@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { TAppProps } from '../../app';
 import { Header } from '../../components/header';
 import { OfferCard } from '../../components/offer-card';
@@ -8,6 +9,9 @@ type TMainPageProps = Pick<TAppProps, 'cardAmount'>
 export const MainPage = ({ cardAmount }: TMainPageProps): JSX.Element => (
   <div className="page page--gray page--main">
     <Header/>
+    <Helmet>
+      <title>6 cities</title>
+    </Helmet>
     <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>
       <div className="tabs">
