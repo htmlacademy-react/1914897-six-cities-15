@@ -1,5 +1,6 @@
 import { FC, Fragment} from 'react';
 import { Link } from 'react-router-dom';
+import { AppRoute } from '../../app/router/routes/routes';
 
 export const NotFoundPage: FC = () => (
   <Fragment>
@@ -41,7 +42,7 @@ export const NotFoundPage: FC = () => (
       }}
       >
         <h1>Страница не найдена</h1>
-        <Link to="/">Вернуться на главную</Link>
+        <Link to={AppRoute.Main}>Вернуться на главную</Link>
       </div>
     </main>
     <footer className="footer container">

@@ -1,5 +1,5 @@
 import { MainPage } from '../pages/main-page';
-import { AppRoute } from './router/router';
+import { AppRoute } from './router/routes/routes';
 import { NotFoundPage } from '../pages/not-found-page';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { FC, PropsWithChildren } from 'react';

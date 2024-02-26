@@ -1,14 +1,12 @@
 import { TAppProps } from '../../app';
 import { Header } from '../../components/header';
 import { OfferCard } from '../../components/offer-card';
-import { LoginPage } from '../login-page/login-page';
 import { MainEmptyPage } from '../main-empty-page';
 
 type TMainPageProps = Pick<TAppProps, 'cardAmount'>
 
 export const MainPage = ({ cardAmount }: TMainPageProps): JSX.Element => (
   <div className="page page--gray page--main">
-    <LoginPage></LoginPage>
     <Header/>
     <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>
