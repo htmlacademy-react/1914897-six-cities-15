@@ -1,11 +1,12 @@
 import { MainPage } from '../pages/main-page';
-import { AppRoute } from './router/routes/routes';
+import { AppRoute, AuthorizationStatus } from './router/routes/routes';
 import { NotFoundPage } from '../pages/not-found-page';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { FC, PropsWithChildren } from 'react';
 import { LoginPage } from '../pages/login-page/login-page';
 import { FavoritesPage } from '../pages/favorites-page';
 import { OfferPage } from '../pages/offer-page';
+import { PrivateRoute } from './router/private-route/private-route';
 
 export type TAppProps = {
   cardAmount: number;
@@ -19,19 +20,25 @@ export const App: FC<PropsWithChildren<TAppProps>> = ({ cardAmount }) => (
       />
       <Route
         path={AppRoute.Login}
-        element={<LoginPage/>}
+        element={<LoginPage />}
       />
       <Route
         path={AppRoute.Favorites}
-        element={<FavoritesPage/>}
+        element={
+          <PrivateRoute
+            authorizationStatus={AuthorizationStatus.NoAuth}
+          >
+            <FavoritesPage />
+          </PrivateRoute>
+        }
       />
       <Route
         path={AppRoute.Offer}
-        element={<OfferPage/>}
+        element={<OfferPage />}
       />
       <Route
         path='*'
-        element={<NotFoundPage/>}
+        element={<NotFoundPage />}
       />
     </Routes>
   </BrowserRouter>
