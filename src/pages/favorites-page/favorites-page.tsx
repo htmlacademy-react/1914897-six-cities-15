@@ -1,5 +1,10 @@
+import { Helmet } from 'react-helmet-async';
+
 export const FavoritesPage = (): JSX.Element => (
   <div className="page__favorites-container container">
+    <Helmet>
+      <title>6 cities. Favorites</title>
+    </Helmet>
     <section className="favorites">
       <h1 className="favorites__title">Saved listing</h1>
       <ul className="favorites__list">
