@@ -12,17 +12,16 @@ import { TOfferFull } from '../types/offers';
 import { TComment } from '../types/comments';
 
 export type TAppProps = {
-  cardAmount: number;
   offers: TOfferFull[];
   comments: TComment[];
 };
 
-export const App: FC<PropsWithChildren<TAppProps>> = ({ cardAmount, offers, comments }) => (
+export const App: FC<PropsWithChildren<TAppProps>> = ({ offers, comments }) => (
   <HelmetProvider>
     <BrowserRouter>
       <Routes>
         <Route
-          index element={<MainPage cardAmount={cardAmount} />}
+          index element={<MainPage offers={offers}/>}
         />
         <Route
           path={AppRoute.Login}
@@ -32,14 +31,14 @@ export const App: FC<PropsWithChildren<TAppProps>> = ({ cardAmount, offers, comm
           path={AppRoute.Favorites}
           element={
             <PrivateRoute
-              authorizationStatus={AuthorizationStatus.NoAuth}
+              authorizationStatus={AuthorizationStatus.Auth}
             >
               <FavoritesPage />
             </PrivateRoute>
           }
         />
         <Route
-          path={AppRoute.Offer}
+          path={`${AppRoute.Offer}/:id`}
           element={
             <OfferPage
               offers={offers}

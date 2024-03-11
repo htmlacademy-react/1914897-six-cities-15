@@ -7,6 +7,7 @@ import { NotFoundPage } from '../not-found-page';
 import { capitalizeFirstLetter } from '../../utils';
 import { CommentsList } from '../../components/comments-list/comments-list';
 import { TComment } from '../../types/comments';
+import { Header } from '../../components/header';
 
 type TOfferProps = {
   offers: TOfferFull[];
@@ -23,6 +24,7 @@ export const OfferPage: FC<TOfferProps> = ({ offers, comments }) => {
 
   return (
     <div className="page">
+      <Header></Header>
       <Helmet>
         <title>6 cities. Offer</title>
       </Helmet>
