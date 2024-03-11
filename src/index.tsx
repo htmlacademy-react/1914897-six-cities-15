@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './app';
-import { Setting } from './const';
 import { offers } from './mocks/offers';
 import { comments } from './mocks/comments';
+import { favoriteOffers } from './mocks/favorites-offers';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,9 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App
-      cardAmount={Setting.CardsTotal}
       offers={offers}
       comments={comments}
+      favoriteOffers={favoriteOffers}
     />
   </React.StrictMode>
 );

@@ -8,15 +8,16 @@ import { FavoritesPage } from '../pages/favorites-page';
 import { OfferPage } from '../pages/offer-page';
 import { PrivateRoute } from './router/private-route/private-route';
 import { HelmetProvider } from 'react-helmet-async';
-import { TOfferFull } from '../types/offers';
+import { TOfferFull, TOfferStart } from '../types/offers';
 import { TComment } from '../types/comments';
 
 export type TAppProps = {
   offers: TOfferFull[];
   comments: TComment[];
+  favoriteOffers: TOfferStart[];
 };
 
-export const App: FC<PropsWithChildren<TAppProps>> = ({ offers, comments }) => (
+export const App: FC<PropsWithChildren<TAppProps>> = ({ offers, comments, favoriteOffers }) => (
   <HelmetProvider>
     <BrowserRouter>
       <Routes>
@@ -33,7 +34,9 @@ export const App: FC<PropsWithChildren<TAppProps>> = ({ offers, comments }) => (
             <PrivateRoute
               authorizationStatus={AuthorizationStatus.Auth}
             >
-              <FavoritesPage />
+              <FavoritesPage
+                favoriteOffers={favoriteOffers}
+              />
             </PrivateRoute>
           }
         />

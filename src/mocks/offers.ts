@@ -1,5 +1,4 @@
 import { TOfferFull } from '../types/offers';
-import { Cities } from '../const';
 
 export const offers: TOfferFull[] = [
   {
@@ -8,7 +7,7 @@ export const offers: TOfferFull[] = [
     type: 'apartment',
     price: 120,
     city: {
-      name: Cities.Amsterdam,
+      name: 'Amsterdam',
       location: {
         latitude: 52.35514938496378,
         longitude: 4.673877537499948,
@@ -51,7 +50,7 @@ export const offers: TOfferFull[] = [
     type: 'hotel',
     price: 120,
     city: {
-      name: Cities.Brussels,
+      name: 'Brussels',
       location: {
         latitude: 54.35514938496378,
         longitude: 5.673877537499948,
@@ -78,7 +77,7 @@ export const offers: TOfferFull[] = [
       isPro: true
     },
     images: [
-      'https://url-to-image/image.png'
+      'https://plus.unsplash.com/premium_photo-1677101221533-52b45823a2dc?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     ],
     maxAdults: 3
   },
@@ -88,7 +87,7 @@ export const offers: TOfferFull[] = [
     type: 'house',
     price: 400,
     city: {
-      name: Cities.Hamburg,
+      name: 'Hamburg',
       location: {
         latitude: 52.35514938496378,
         longitude: 4.673877537499948,
@@ -115,7 +114,7 @@ export const offers: TOfferFull[] = [
       isPro: true
     },
     images: [
-      'https://url-to-image/image.png'
+      'https://images.unsplash.com/photo-1573865526739-10659fec78a5?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     ],
     maxAdults: 12
   },
@@ -125,7 +124,7 @@ export const offers: TOfferFull[] = [
     type: 'room',
     price: 90,
     city: {
-      name: Cities.Dusseldorf,
+      name: 'Dusseldorf',
       location: {
         latitude: 52.35514938496378,
         longitude: 4.673877537499948,
@@ -138,7 +137,7 @@ export const offers: TOfferFull[] = [
       zoom: 8
     },
     isFavorite: false,
-    isPremium: false,
+    isPremium: true,
     rating: 2,
     previewImage: 'https://url-to-image/image.png',
     description: 'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
@@ -152,7 +151,7 @@ export const offers: TOfferFull[] = [
       isPro: false
     },
     images: [
-      'https://url-to-image/image.png'
+      'https://images.unsplash.com/photo-1495360010541-f48722b34f7d?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     ],
     maxAdults: 2
   }
