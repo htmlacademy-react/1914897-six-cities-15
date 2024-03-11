@@ -8,12 +8,16 @@ import { FavoritesPage } from '../pages/favorites-page';
 import { OfferPage } from '../pages/offer-page';
 import { PrivateRoute } from './router/private-route/private-route';
 import { HelmetProvider } from 'react-helmet-async';
+import { TOfferFull } from '../types/offers';
+import { TComment } from '../types/comments';
 
 export type TAppProps = {
   cardAmount: number;
+  offers: TOfferFull[];
+  comments: TComment[];
 };
 
-export const App: FC<PropsWithChildren<TAppProps>> = ({ cardAmount }) => (
+export const App: FC<PropsWithChildren<TAppProps>> = ({ cardAmount, offers, comments }) => (
   <HelmetProvider>
     <BrowserRouter>
       <Routes>
@@ -36,7 +40,12 @@ export const App: FC<PropsWithChildren<TAppProps>> = ({ cardAmount }) => (
         />
         <Route
           path={AppRoute.Offer}
-          element={<OfferPage />}
+          element={
+            <OfferPage
+              offers={offers}
+              comments={comments}
+            />
+          }
         />
         <Route
           path='*'

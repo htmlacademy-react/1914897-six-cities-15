@@ -6,7 +6,7 @@ export const comments: TComment[] = [
     date: new Date(2023, 3, 10),
     user: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'https://i.pravatar.cc/150?img=1',
       isPro: false
     },
     comment: 'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
@@ -17,7 +17,7 @@ export const comments: TComment[] = [
     date: new Date(2023, 5, 11),
     user: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'https://i.pravatar.cc/150?img=2',
       isPro: false
     },
     comment: 'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
@@ -28,7 +28,7 @@ export const comments: TComment[] = [
     date: new Date(2024, 1, 15),
     user: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'https://i.pravatar.cc/150?img=10',
       isPro: true
     },
     comment: 'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',

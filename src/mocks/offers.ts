@@ -3,12 +3,12 @@ import { Cities } from '../const';
 
 export const offers: TOfferFull[] = [
   {
-    id: '6af6f711-c28d-4121-82cd-e0b462a27f00',
-    title: 'Beautiful & luxurious studio at great location',
+    id: '1',
+    title: 'Тестовое название :)',
     type: 'apartment',
     price: 120,
     city: {
-      name:  Cities.Amsterdam ,
+      name: Cities.Amsterdam,
       location: {
         latitude: 52.35514938496378,
         longitude: 4.673877537499948,
@@ -20,22 +20,28 @@ export const offers: TOfferFull[] = [
       longitude: 4.673877537499948,
       zoom: 8
     },
-    isFavorite: false,
-    isPremium: false,
+    isFavorite: true,
+    isPremium: true,
     rating: 4,
     previewImage: 'https://url-to-image/image.png',
-    description: 'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
-    bedrooms: 3,
+    description: 'У капибары нет хвоста; Живут они целыми группами, примерно от 20 до 30 капибар. И они очень общительны. Общаются капибары звуками. Общаются между собой они словно стрекочат, или посвистывают. Если капибарам угрожает опасность, они начинают тявкать, сообщая это остальным сородичам. Более взрослые особи защищают младших; Капибары размножаются в течение всего года, но обычно спариваются они в сезон дождей.',
+    bedrooms: 4,
     goods: [
-      'Heating'
+      'Heating',
+      'Wi-Fi'
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
-      isPro: false
+      avatarUrl: 'https://i.pravatar.cc/150?img=2',
+      isPro: true,
     },
     images: [
-      'https://url-to-image/image.png'
+      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1743&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1743&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1743&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1743&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1743&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1743&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     ],
     maxAdults: 4
   },
@@ -45,7 +51,7 @@ export const offers: TOfferFull[] = [
     type: 'hotel',
     price: 120,
     city: {
-      name:  Cities.Brussels,
+      name: Cities.Brussels,
       location: {
         latitude: 54.35514938496378,
         longitude: 5.673877537499948,
@@ -68,7 +74,7 @@ export const offers: TOfferFull[] = [
     ],
     host: {
       name: 'Pol Atreides',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'https://i.pravatar.cc/150?img=1 ',
       isPro: true
     },
     images: [
@@ -82,7 +88,7 @@ export const offers: TOfferFull[] = [
     type: 'house',
     price: 400,
     city: {
-      name:  Cities.Hamburg,
+      name: Cities.Hamburg,
       location: {
         latitude: 52.35514938496378,
         longitude: 4.673877537499948,
@@ -105,7 +111,7 @@ export const offers: TOfferFull[] = [
     ],
     host: {
       name: 'Billie Harrington',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'https://i.pravatar.cc/150?img=10',
       isPro: true
     },
     images: [
@@ -119,7 +125,7 @@ export const offers: TOfferFull[] = [
     type: 'room',
     price: 90,
     city: {
-      name:  Cities.Dusseldorf,
+      name: Cities.Dusseldorf,
       location: {
         latitude: 52.35514938496378,
         longitude: 4.673877537499948,
