@@ -46,6 +46,7 @@ export const App: FC<PropsWithChildren<TAppProps>> = ({ offers, comments, favori
             <OfferPage
               offers={offers}
               comments={comments}
+              authorizationStatus={AuthorizationStatus.Auth}
             />
           }
         />

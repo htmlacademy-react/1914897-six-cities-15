@@ -8,13 +8,16 @@ import { capitalizeFirstLetter } from '../../utils';
 import { CommentsList } from '../../components/comments-list/comments-list';
 import { TComment } from '../../types/comments';
 import { Header } from '../../components/header';
+import { ReviewForm } from '../../components/review-form';
+import { AuthorizationStatus } from '../../app/router/routes/routes';
 
 type TOfferProps = {
   offers: TOfferFull[];
   comments: TComment[];
+  authorizationStatus: AuthorizationStatus;
 }
 
-export const OfferPage: FC<TOfferProps> = ({ offers, comments }) => {
+export const OfferPage: FC<TOfferProps> = ({ offers, comments, authorizationStatus }) => {
   const { id } = useParams();
   const currentOffer: TOfferFull | undefined = offers.find((offer: TOfferFull) => offer.id === id);
 
@@ -122,6 +125,11 @@ export const OfferPage: FC<TOfferProps> = ({ offers, comments }) => {
                 <ul className="reviews__list">
                   <CommentsList comments={comments}/>
                 </ul>
+
+                {
+                  (authorizationStatus === AuthorizationStatus.Auth) && <ReviewForm/>
+                }
+
               </section>
             </div>
           </div>
