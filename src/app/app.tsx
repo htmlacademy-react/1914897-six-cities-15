@@ -8,17 +8,21 @@ import { FavoritesPage } from '../pages/favorites-page';
 import { OfferPage } from '../pages/offer-page';
 import { PrivateRoute } from './router/private-route/private-route';
 import { HelmetProvider } from 'react-helmet-async';
+import { TOfferFull, TOfferStart } from '../types/offers';
+import { TComment } from '../types/comments';
 
 export type TAppProps = {
-  cardAmount: number;
+  offers: TOfferFull[];
+  comments: TComment[];
+  favoriteOffers: TOfferStart[];
 };
 
-export const App: FC<PropsWithChildren<TAppProps>> = ({ cardAmount }) => (
+export const App: FC<PropsWithChildren<TAppProps>> = ({ offers, comments, favoriteOffers }) => (
   <HelmetProvider>
     <BrowserRouter>
       <Routes>
         <Route
-          index element={<MainPage cardAmount={cardAmount} />}
+          index element={<MainPage offers={offers}/>}
         />
         <Route
           path={AppRoute.Login}
@@ -28,15 +32,23 @@ export const App: FC<PropsWithChildren<TAppProps>> = ({ cardAmount }) => (
           path={AppRoute.Favorites}
           element={
             <PrivateRoute
-              authorizationStatus={AuthorizationStatus.NoAuth}
+              authorizationStatus={AuthorizationStatus.Auth}
             >
-              <FavoritesPage />
+              <FavoritesPage
+                favoriteOffers={favoriteOffers}
+              />
             </PrivateRoute>
           }
         />
         <Route
-          path={AppRoute.Offer}
-          element={<OfferPage />}
+          path={`${AppRoute.Offer}/:id`}
+          element={
+            <OfferPage
+              offers={offers}
+              comments={comments}
+              authorizationStatus={AuthorizationStatus.Auth}
+            />
+          }
         />
         <Route
           path='*'
