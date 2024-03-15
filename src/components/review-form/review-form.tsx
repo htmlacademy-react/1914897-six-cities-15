@@ -26,6 +26,7 @@ export const ReviewForm: FC = () => {
     evt.preventDefault();
   };
 
+
   return (
     <form
       className="reviews__form form"
