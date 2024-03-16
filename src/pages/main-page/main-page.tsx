@@ -5,6 +5,8 @@ import { FC } from 'react';
 import { OfferList } from '../../components/offer-list/offer-list';
 import { Nullable } from 'vitest';
 import { useState } from 'react';
+import { Map } from '../../components/map';
+import { City } from '../../const';
 
 type TMainPageProps = {
   offers: TOfferFull[];
@@ -12,7 +14,7 @@ type TMainPageProps = {
 
 export const MainPage: FC<TMainPageProps> = ({offers}) => {
 
-  const [, setActiveOffer] = useState<Nullable<TOfferFull>>(null);
+  const [activeOffer, setActiveOffer] = useState<Nullable<TOfferFull>>(null);
   const cardHoverHandler = (offer? : TOfferFull) => {
     setActiveOffer(offer || null);
   };
@@ -90,7 +92,10 @@ export const MainPage: FC<TMainPageProps> = ({offers}) => {
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map" />
+              <Map
+                offers={offers}
+                city={City} activeOffer={activeOffer}
+              />
             </div>
           </div>
         </div>
